@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-size: 45px;
+}
+html, body {
+    margin: 0;
+}
+h1 {
+    font-size: 1.3rem;
+    font-family: 'Raleway', sans-serif;
+    color:honeydew;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+#wrapper {
+    align-items: center;
+    min-height: 600px;
+    display: flex;
+    margin: 0, auto;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgb(5, 202, 136), white); 
+    position: relative;
+    
+}
+
+button {
+    margin-top: 15px;
+    color: white;
+    border-radius: 10px;
+    background: rgba(22, 211, 54, 0.603);
+    font-size: 0.8rem;
+
+}
+button:hover {
+    border: 2px solid black;
+    
+
+}
+button:focus {
+    outline: none;
+
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+  } 
+
+label {
+    animation-name: label;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: rgb(115, 114, 124);
+    border: 2px solid #444;
+    border-radius: 8px;
+    color:honeydew;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    
+}
+input[type="radio"]:checked + label {
+    background-color:#bfb;
+    border-color: #4c4; 
+}
+
+label:hover {
+    background-color: rgb(97, 235, 97);
+}
+
+#points {
+    animation-name: points;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: rgb(2, 65, 26);
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 30px;
+    padding: 5px;
+
+}
+
+#result {
+    background: black;
+    color:honeydew;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    
+}
+#rounds {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: honeydew;
+    font-size: 0.8rem;
+
+}
+
+@keyframes points {
+    50% {transform: translateX(200px) }
+    100% {transform: translateX(-200px) }
+    
+}
+@keyframes label {
+    50% {transform: rotate(10deg) }
+    100% {transform: rotate(-10deg) }
+    
+}
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: 30px;
+    }
+    h1 {
+        margin-top: 40px;
+    }
+    #options {
+        display: flex;
+        flex-direction: column;
+
+    }
+    label {
+        width: 100%;
+        margin: 0, 30px;
+    }
+    @keyframes points {
+        50% {transform: translateX(20%) }
+        100% {transform: translateX(-20%) }
+        
+    }
+  }
